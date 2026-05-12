@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>💜 KAIZEN SHOP | โCHEER</title>
-    <!-- Tailwind CSS -->
+    <title>💜 KAIZEN SHOP | CHEER</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -23,14 +20,15 @@
                         script: ['Pacifico', 'cursive'],
                     },
                     colors: {
-                        'bg-top': '#fdfaff',
-                        'bg-middle': '#faeef8',
-                        'bg-bottom': '#d0bdf7',
-                        'blob-purple': '#9c7dfb',
-                        'text-pink': '#ff96d5',
-                        'text-blue': '#7976ff',
-                        'welcy-pink': '#fc72b8',
-                        'text-sub': '#b4a6ea',
+                        // ปรับโทนสีเป็น ดำ-น้ำเงิน
+                        'bg-top': '#0f172a',    // Dark Navy
+                        'bg-middle': '#1e293b', // Slate Dark
+                        'bg-bottom': '#020617', // Deep Black
+                        'blob-purple': '#3b82f6', // Bright Blue
+                        'text-pink': '#6366f1',   // Indigo (แทนชมพูเดิม)
+                        'text-blue': '#60a5fa',   // Light Blue
+                        'welcy-pink': '#2563eb',  // Royal Blue
+                        'text-sub': '#94a3b8',    // Gray Blue
                     }
                 }
             }
@@ -38,15 +36,16 @@
     </script>
 
     <style>
-        /* ล็อคหน้าจอและใส่ไล่สีพื้นหลังแบบคงที่ (Fixed Gradient) */
+        /* ล็อคหน้าจอและใส่ไล่สีพื้นหลังแบบคงที่ (Fixed Gradient) - ปรับเป็นโทนมืด */
         html, body {
-            background: linear-gradient(180deg, #fdfaff 0%, #faeef8 40%, #d0bdf7 100%);
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 40%, #020617 100%);
             background-attachment: fixed;
             margin: 0;
             padding: 0;
             width: 100%;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            color: #f1f5f9; /* ปรับสีตัวอักษรพื้นฐานให้สว่างขึ้นเพื่อให้อ่านง่ายบนพื้นหลังดำ */
         }
 
         /* ล็อคพื้นหลังสีฟุ้งให้คงที่ */
@@ -58,22 +57,22 @@
             height: 60vw;
             max-width: 600px;
             max-height: 600px;
-            background-color: #9c7dfb;
+            background-color: #3b82f6;
             border-radius: 50%;
             filter: blur(100px);
-            opacity: 0.5;
+            opacity: 0.3; /* ลด opacity ลงเล็กน้อยเพื่อให้ดูสบายตาในโหมดมืด */
             z-index: -1;
             pointer-events: none;
             transform: translateZ(0);
         }
 
-        /* เอฟเฟกต์ขอบสติกเกอร์สีขาวหนา */
+        /* เอฟเฟกต์ขอบสติกเกอร์สีขาวหนา - คงเดิม */
         .sticker-text {
             text-shadow: 
                 -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, 4px 4px 0 #fff,
                 -5px 0 0 #fff, 5px 0 0 #fff, 0 -5px 0 #fff, 0 5px 0 #fff,
                 -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff,
-                0px 10px 15px rgba(121, 118, 255, 0.25);
+                0px 10px 15px rgba(37, 99, 235, 0.25);
         }
 
         /* ไอคอนสติกเกอร์ (แบบนิ่งสนิท) */
@@ -82,19 +81,18 @@
             pointer-events: none;
         }
 
-        /* Custom Scrollbar */
+        /* Custom Scrollbar - เปลี่ยนเป็นโทนน้ำเงิน */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #ff96d5; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
     </style>
 </head>
-<body class="text-gray-700 pb-20">
+<body class="pb-20">
 
     <div class="ambient-blob"></div>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 space-y-10 relative z-10">
         
-        <!-- Header Section -->
         <header class="flex flex-col items-center justify-center pt-8 pb-16 relative w-full overflow-visible">
             
             <div class="relative w-full max-w-[500px] flex flex-col items-center">
@@ -118,7 +116,7 @@
                     </h1>
 
                     <i class="fa-solid fa-star sticker-icon absolute -top-4 -left-4 text-3xl text-yellow-300 -rotate-12 z-50"></i>
-                    <i class="fa-solid fa-heart sticker-icon absolute -bottom-4 -right-2 text-2xl text-pink-400 rotate-12 z-50"></i>
+                    <i class="fa-solid fa-heart sticker-icon absolute -bottom-4 -right-2 text-2xl text-blue-400 rotate-12 z-50"></i>
                 </div>
 
                 <div class="text-welcy-pink font-sans font-medium tracking-[0.3em] sm:tracking-[0.5em] text-[10px] sm:text-xs mt-12 sm:mt-16 uppercase z-40">
@@ -126,59 +124,57 @@
                 </div>
             </div>
 
-            <div class="bg-white/85 backdrop-blur-md rounded-2xl p-6 mt-10 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.05)] text-center max-w-2xl w-full relative">
+            <div class="bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 mt-10 border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.3)] text-center max-w-2xl w-full relative">
                 <h2 class="text-xl sm:text-2xl font-semibold text-text-blue mb-2">ยินดีต้อนรับเข้าสู่อาณาจักรไคเซ็น🎱</h2>
-                <p class="text-sm sm:text-base text-gray-600">
+                <p class="text-sm sm:text-base text-gray-300">
                     ร้านไคเซ็นรับทำเซิร์ฟเวอร์ ระบบดิสคอร์ด ขายดิสสำเร็จ<br class="hidden sm:block">รับกลางดิสคอร์ดและทำเว็บต่างๆ
                 </p>
                 <i class="fa-solid fa-sparkles sticker-icon absolute -top-4 -right-4 text-2xl text-yellow-400 z-50"></i>
             </div>
         </header>
 
-        <!-- Services Section -->
-        <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative">
-            <i class="fa-solid fa-wand-magic-sparkles sticker-icon absolute -top-4 -left-4 text-3xl text-purple-400 rotate-12 z-50"></i>
+        <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5 relative">
+            <i class="fa-solid fa-wand-magic-sparkles sticker-icon absolute -top-4 -left-4 text-3xl text-blue-400 rotate-12 z-50"></i>
             
-            <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-purple-50 pb-3 mb-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-text-blue">
+            <h3 class="text-xl font-semibold text-gray-100 border-b-2 border-gray-800 pb-3 mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-text-blue">
                     <i class="fa-solid fa-layer-group"></i>
                 </div>
                 บริการรับทำเว็บไซต์
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="p-4 rounded-xl border border-gray-100 flex items-center gap-4 bg-white/50">
-                    <div class="w-12 h-12 rounded-lg bg-white shadow-sm text-text-pink flex items-center justify-center text-xl shrink-0">
+                <div class="p-4 rounded-xl border border-gray-800 flex items-center gap-4 bg-gray-800/50">
+                    <div class="w-12 h-12 rounded-lg bg-gray-900 shadow-sm text-text-pink flex items-center justify-center text-xl shrink-0">
                         <i class="fa-solid fa-mobile-screen"></i>
                     </div>
-                    <span class="font-medium text-gray-700">เว็บใส่เลขบัญชี</span>
+                    <span class="font-medium text-gray-200">เว็บใส่เลขบัญชี</span>
                 </div>
-                <div class="p-4 rounded-xl border border-gray-100 flex items-center gap-4 bg-white/50">
-                    <div class="w-12 h-12 rounded-lg bg-white shadow-sm text-text-blue flex items-center justify-center text-xl shrink-0">
+                <div class="p-4 rounded-xl border border-gray-800 flex items-center gap-4 bg-gray-800/50">
+                    <div class="w-12 h-12 rounded-lg bg-gray-900 shadow-sm text-text-blue flex items-center justify-center text-xl shrink-0">
                         <i class="fa-solid fa-gamepad"></i>
                     </div>
-                    <span class="font-medium text-gray-700">เว็บเรทราคารับเติมเกม</span>
+                    <span class="font-medium text-gray-200">เว็บเรทราคารับเติมเกม</span>
                 </div>
-                <div class="p-4 rounded-xl border border-gray-100 flex items-center gap-4 bg-white/50">
-                    <div class="w-12 h-12 rounded-lg bg-white shadow-sm text-blue-400 flex items-center justify-center text-xl shrink-0">
+                <div class="p-4 rounded-xl border border-gray-800 flex items-center gap-4 bg-gray-800/50">
+                    <div class="w-12 h-12 rounded-lg bg-gray-900 shadow-sm text-blue-400 flex items-center justify-center text-xl shrink-0">
                         <i class="fa-solid fa-images"></i>
                     </div>
-                    <span class="font-medium text-gray-700">เว็บเรทราคางานต่างๆ</span>
+                    <span class="font-medium text-gray-200">เว็บเรทราคางานต่างๆ</span>
                 </div>
-                <div class="p-4 rounded-xl border border-gray-100 flex items-center gap-4 bg-white/50">
-                    <div class="w-12 h-12 rounded-lg bg-white shadow-sm text-yellow-500 flex items-center justify-center text-xl shrink-0">
+                <div class="p-4 rounded-xl border border-gray-800 flex items-center gap-4 bg-gray-800/50">
+                    <div class="w-12 h-12 rounded-lg bg-gray-900 shadow-sm text-yellow-500 flex items-center justify-center text-xl shrink-0">
                         <i class="fa-solid fa-ellipsis"></i>
                     </div>
-                    <span class="font-medium text-gray-700">ส่วนเว็บอื่นๆสามารถสอบถามเพิ่มเติมได้ค่ะ</span>
+                    <span class="font-medium text-gray-200">ส่วนเว็บอื่นๆสามารถสอบถามเพิ่มเติมได้ค่ะ</span>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative">
-            <i class="fa-solid fa-camera sticker-icon absolute -bottom-4 -left-4 text-3xl text-pink-300 -rotate-12 z-50"></i>
+        <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5 relative">
+            <i class="fa-solid fa-camera sticker-icon absolute -bottom-4 -left-4 text-3xl text-blue-300 -rotate-12 z-50"></i>
             
-            <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-purple-50 pb-3 mb-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-text-pink">
+            <h3 class="text-xl font-semibold text-gray-100 border-b-2 border-gray-800 pb-3 mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-text-pink">
                     <i class="fa-solid fa-folder-open"></i>
                 </div>
                 ตัวอย่างผลงาน
@@ -186,15 +182,15 @@
             
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                    <h4 class="text-base font-semibold text-gray-800 flex items-center gap-2 mb-3">
+                    <h4 class="text-base font-semibold text-gray-200 flex items-center gap-2 mb-3">
                         <i class="fa-solid fa-moon text-gray-500"></i> ผลงานเว็บ website
                     </h4>
                     <div class="space-y-2">
-                        <a href="https://kaizenshopkz.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-50/50 hover:bg-white text-sm text-gray-600 transition-colors border border-gray-100"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 mr-2"></i> dd3.cozyw75.workers.dev</a>
-                        <a href="https://kzcr.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-50/50 hover:bg-white text-sm text-gray-600 transition-colors border border-gray-100"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 mr-2"></i> pinkblue.cozyw75.workers.dev</a>
-                        <a href="https://cheercr.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-50/50 hover:bg-white text-sm text-gray-600 transition-colors border border-gray-100"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 mr-2"></i> pinkdark.cozyw75.workers.dev</a>
-                        <a href="https://001.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-50/50 hover:bg-white text-sm text-gray-600 transition-colors border border-gray-100"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 mr-2"></i> jugame.cozyw75.workers.dev</a>
-                        <a href="https://dinoshopdn.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-50/50 hover:bg-white text-sm text-gray-600 transition-colors border border-gray-100"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 mr-2"></i> wander.cozyw75.workers.dev</a>
+                        <a href="https://kaizenshopkz.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-sm text-gray-300 transition-colors border border-gray-700"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 mr-2"></i> dd3.cozyw75.workers.dev</a>
+                        <a href="https://kzcr.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-sm text-gray-300 transition-colors border border-gray-700"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 mr-2"></i> pinkblue.cozyw75.workers.dev</a>
+                        <a href="https://cheercr.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-sm text-gray-300 transition-colors border border-gray-700"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 mr-2"></i> pinkdark.cozyw75.workers.dev</a>
+                        <a href="https://001.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-sm text-gray-300 transition-colors border border-gray-700"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 mr-2"></i> jugame.cozyw75.workers.dev</a>
+                        <a href="https://dinoshopdn.voisineofficial.workers.dev/" target="_blank" class="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-sm text-gray-300 transition-colors border border-gray-700"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 mr-2"></i> wander.cozyw75.workers.dev</a>
                     </div>
                 </div>
 
@@ -203,79 +199,77 @@
                         <i class="fa-solid fa-palette text-text-pink"></i> ผลงานดิสคอร์ด Discord
                     </h4>
                     <div class="space-y-2">
-                        <a href="https://drive.google.com/drive/folders/187AelMeeOfsdvWFpSHq8QxwIPsw7Kmzd?usp=drive_link" target="_blank" class="block p-3 rounded-lg bg-pink-50/30 hover:bg-white text-sm text-gray-600 transition-colors border border-pink-50"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-pink-300 mr-2"></i> wish-uwu.cozyw75.workers.dev</a>
+                        <a href="https://drive.google.com/drive/folders/187AelMeeOfsdvWFpSHq8QxwIPsw7Kmzd?usp=drive_link" target="_blank" class="block p-3 rounded-lg bg-indigo-900/30 hover:bg-indigo-900/50 text-sm text-gray-300 transition-colors border border-indigo-900/50"><i class="fa-solid fa-arrow-up-right-from-square text-xs text-indigo-400 mr-2"></i> wish-uwu.cozyw75.workers.dev</a>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-100 text-center">
-                <a href="https://www.facebook.com/kaizen.shop.cheer?" target="_blank" class="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-medium bg-blue-50/50 px-4 py-2 rounded-full">
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center">
+                <a href="https://www.facebook.com/kaizen.shop.cheer?" target="_blank" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium bg-blue-900/30 px-4 py-2 rounded-full">
                     ดูตัวอย่างเพิ่มเติมที่ อัลบั้ม Facebook <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative">
+        <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5 relative">
             <i class="fa-solid fa-gem sticker-icon absolute -top-4 -right-4 text-3xl text-blue-300 rotate-12 z-50"></i>
             
-            <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-purple-50 pb-3 mb-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
+            <h3 class="text-xl font-semibold text-gray-100 border-b-2 border-gray-800 pb-3 mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400">
                     <i class="fa-solid fa-tags"></i>
                 </div>
                 เรทราคาทำเว็บ
             </h3>
 
-            <div class="bg-gradient-to-r from-pink-50/50 to-purple-50/50 p-6 rounded-xl border border-white shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="bg-gradient-to-r from-blue-900/40 to-indigo-900/40 p-6 rounded-xl border border-white/10 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="text-center md:text-left">
-                    <h4 class="text-lg font-semibold text-gray-800">แพ็กเกจเริ่มต้น</h4>
-                    <p class="text-sm text-gray-600 mt-1">รายละเอียดไม่เยอะ เริ่มต้นที่</p>
+                    <h4 class="text-lg font-semibold text-gray-100">แพ็กเกจเริ่มต้น</h4>
+                    <p class="text-sm text-gray-400 mt-1">รายละเอียดไม่เยอะ เริ่มต้นที่</p>
                 </div>
                 <div class="text-3xl font-bold text-text-pink">209.-</div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h5 class="font-medium text-gray-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-chart-line text-text-blue"></i> กรณีรายละเอียดเพิ่มขึ้น</h5>
+                    <h5 class="font-medium text-gray-200 mb-4 flex items-center gap-2"><i class="fa-solid fa-chart-line text-text-blue"></i> กรณีรายละเอียดเพิ่มขึ้น</h5>
                     <ul class="space-y-3">
                         <li class="flex justify-between items-center pb-2">
-                            <span class="text-gray-600 text-sm">สำหรับรายละเอียดเยอะมากๆ</span> <span class="font-semibold text-gray-800">เริ่ม 300.-</span>
+                            <span class="text-gray-400 text-sm">สำหรับรายละเอียดเยอะมากๆ</span> <span class="font-semibold text-gray-200">เริ่ม 300.-</span>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h5 class="font-medium text-gray-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-text-pink"></i> เรทการแก้ไขงาน</h5>
+                    <h5 class="font-medium text-gray-200 mb-4 flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-text-pink"></i> เรทการแก้ไขงาน</h5>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-sm text-gray-600">
+                        <li class="flex items-start gap-3 text-sm text-gray-400">
                             <i class="fa-solid fa-check text-green-500 mt-1"></i> 
-                            <span>แก้ไขข้อมูลหลังส่งตรวจ <span class="font-semibold text-green-600">ฟรี 1 ครั้งหากเป็นความผิดร้าน</span></span>
+                            <span>แก้ไขข้อมูลหลังส่งตรวจ <span class="font-semibold text-green-400">ฟรี 1 ครั้งหากเป็นความผิดร้าน</span></span>
                         </li>
-                        <li class="flex items-start gap-3 text-sm text-gray-600">
+                        <li class="flex items-start gap-3 text-sm text-gray-400">
                             <i class="fa-solid fa-screwdriver-wrench text-orange-400 mt-1"></i> 
-                            <span>หากจะแก้เกิดจากลูกค้าบรีฟไม่ชัดเจน<span class="font-semibold text-gray-800">เริ่มต้น 30.-</span></span>
+                            <span>หากจะแก้เกิดจากลูกค้าบรีฟไม่ชัดเจน<span class="font-semibold text-gray-200">เริ่มต้น 30.-</span></span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="mt-6 p-4 bg-gray-50/50 rounded-xl text-xs text-gray-500 flex items-start gap-2">
-                <i class="fa-solid fa-circle-info text-gray-400 mt-0.5"></i>
+            <div class="mt-6 p-4 bg-gray-800/30 rounded-xl text-xs text-gray-500 flex items-start gap-2">
+                <i class="fa-solid fa-circle-info text-gray-500 mt-0.5"></i>
                 <p>หมายเหตุ: ราคาขึ้นอยู่กับความละเอียดของข้อมูลและปริมาณเนื้อหา ทางร้านขอสงวนสิทธิ์ในการประเมินราคาให้ตามความเหมาะสม</p>
             </div>
         </section>
 
-        <!-- Process & Rules -->
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8 relative">
-            <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white">
-                <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-purple-50 pb-3 mb-6 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+            <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5">
+                <h3 class="text-xl font-semibold text-gray-100 border-b-2 border-gray-800 pb-3 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-green-900/30 flex items-center justify-center text-green-500">
                         <i class="fa-solid fa-list-check"></i>
                     </div>
                     ขั้นตอนการสั่งงาน
                 </h3>
                 
-                <div class="mb-6 p-3 bg-purple-50/30 rounded-xl text-sm text-gray-700 flex items-center gap-3 border border-purple-100/50">
+                <div class="mb-6 p-3 bg-blue-900/20 rounded-xl text-sm text-gray-300 flex items-center gap-3 border border-blue-900/30">
                     <i class="fa-regular fa-clock text-lg text-text-blue"></i>
                     <div>
                         <p>คิวปกติรองาน 5-7 วัน ตามคิว</p>
@@ -283,18 +277,18 @@
                     </div>
                 </div>
 
-                <div class="space-y-4 relative before:absolute before:inset-y-0 before:left-[15px] before:w-[2px] before:bg-gray-100 pl-10">
+                <div class="space-y-4 relative before:absolute before:inset-y-0 before:left-[15px] before:w-[2px] before:bg-gray-800 pl-10">
                     <div class="relative">
-                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-white border border-gray-200 text-gray-500 flex items-center justify-center font-medium text-xs z-10">1</div>
-                        <p class="text-sm text-gray-700">กรอกรายละเอียดที่ร้านส่งให้</p>
+                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-gray-900 border border-gray-700 text-gray-400 flex items-center justify-center font-medium text-xs z-10">1</div>
+                        <p class="text-sm text-gray-300">กรอกรายละเอียดที่ร้านส่งให้</p>
                     </div>
                     <div class="relative">
-                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-white border border-gray-200 text-gray-500 flex items-center justify-center font-medium text-xs z-10">2</div>
-                        <p class="text-sm text-gray-700">ใส่ลิงก์ตัวอย่างงานที่อยากได้</p>
+                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-gray-900 border border-gray-700 text-gray-400 flex items-center justify-center font-medium text-xs z-10">2</div>
+                        <p class="text-sm text-gray-300">ใส่ลิงก์ตัวอย่างงานที่อยากได้</p>
                     </div>
                     <div class="relative">
-                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-white border border-gray-200 text-gray-500 flex items-center justify-center font-medium text-xs z-10">3</div>
-                        <p class="text-sm text-gray-700">รอแอดมินมารวมยอดและชำระเงิน</p>
+                        <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-gray-900 border border-gray-700 text-gray-400 flex items-center justify-center font-medium text-xs z-10">3</div>
+                        <p class="text-sm text-gray-300">รอแอดมินมารวมยอดและชำระเงิน</p>
                     </div>
                     <div class="relative">
                         <div class="absolute -left-[35px] top-0 w-6 h-6 rounded-full bg-text-pink text-white flex items-center justify-center font-medium text-xs z-10 shadow-sm"><i class="fa-solid fa-check"></i></div>
@@ -303,61 +297,59 @@
                 </div>
             </section>
 
-            <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative">
-                <i class="fa-solid fa-hand-holding-heart sticker-icon absolute -bottom-4 -right-4 text-3xl text-pink-400 rotate-12 z-50"></i>
+            <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5 relative">
+                <i class="fa-solid fa-hand-holding-heart sticker-icon absolute -bottom-4 -right-4 text-3xl text-blue-400 rotate-12 z-50"></i>
                 
-                <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-red-50 pb-3 mb-6 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-500">
+                <h3 class="text-xl font-semibold text-gray-100 border-b-2 border-red-900/30 pb-3 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-red-900/30 flex items-center justify-center text-red-500">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
                     เงื่อนไขและข้อตกลงร้านไคเซ็น
                 </h3>
                 
                 <ul class="space-y-4 mt-4">
-                    <li class="flex items-start gap-3 bg-gray-50/30 p-3 rounded-xl border border-gray-100">
+                    <li class="flex items-start gap-3 bg-gray-800/30 p-3 rounded-xl border border-gray-700">
                         <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
-                        <p class="text-sm text-gray-700 leading-relaxed">โอนเงินแล้วแต่ยังไม่เริ่มงาน <span class="font-medium text-red-500">คืนเงิน 50%</span></p>
+                        <p class="text-sm text-gray-300 leading-relaxed">โอนเงินแล้วแต่ยังไม่เริ่มงาน <span class="font-medium text-red-400">คืนเงิน 50%</span></p>
                     </li>
-                    <li class="flex items-start gap-3 bg-gray-50/30 p-3 rounded-xl border border-gray-100">
+                    <li class="flex items-start gap-3 bg-gray-800/30 p-3 rounded-xl border border-gray-700">
                         <i class="fa-solid fa-money-bill-transfer text-orange-400 mt-1"></i>
-                        <p class="text-sm text-gray-700 leading-relaxed">ยกเลิกงานหลังเริ่มทำไปแล้ว <span class="font-medium text-orange-500">ไม่คืนเงินทุกกรณี</span></p>
+                        <p class="text-sm text-gray-300 leading-relaxed">ยกเลิกงานหลังเริ่มทำไปแล้ว <span class="font-medium text-orange-400">ไม่คืนเงินทุกกรณี</span></p>
                     </li>
-                    <li class="flex items-start gap-3 bg-gray-50/30 p-3 rounded-xl border border-gray-100">
+                    <li class="flex items-start gap-3 bg-gray-800/30 p-3 rounded-xl border border-gray-700">
                         <i class="fa-solid fa-ban text-red-400 mt-1"></i>
-                        <p class="text-sm text-gray-700 leading-relaxed">ยกเลิกหลังตรวจงานแล้ว <span class="font-medium text-red-500">ไม่คืนเงิน</span> และจะส่งงานปกติ</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">ยกเลิกหลังตรวจงานแล้ว <span class="font-medium text-red-400">ไม่คืนเงิน</span> และจะส่งงานปกติ</p>
                     </li>
                 </ul>
             </section>
         </div>
 
-        <!-- Course Section -->
         <section class="bg-gradient-to-r from-text-blue to-text-pink rounded-[2rem] p-[2px] shadow-sm relative">
             <i class="fa-solid fa-lightbulb sticker-icon absolute -top-4 -right-4 text-3xl text-yellow-300 -rotate-12 z-50"></i>
             
-            <div class="bg-white/95 rounded-[1.9rem] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                <div class="w-16 h-16 rounded-2xl bg-pink-50 flex items-center justify-center text-3xl text-text-pink shrink-0">
+            <div class="bg-gray-900 rounded-[1.9rem] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                <div class="w-16 h-16 rounded-2xl bg-indigo-900/30 flex items-center justify-center text-3xl text-text-pink shrink-0">
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <div class="flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">คอร์สสอนทำดิสคอร์ดต่างๆ</h3>
-                    <p class="text-sm text-gray-600 mb-3">สอนตั้งแต่พื้นฐาน 0 จนใช้งานได้จริง มีสอนตั้งแต่สร้างดิสไปยังทำระบบสอนหาของตกแต่ง</p>
-                    <div class="inline-block bg-purple-50 text-text-blue font-medium px-4 py-1.5 rounded-lg text-sm border border-purple-100">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-1">คอร์สสอนทำดิสคอร์ดต่างๆ</h3>
+                    <p class="text-sm text-gray-400 mb-3">สอนตั้งแต่พื้นฐาน 0 จนใช้งานได้จริง มีสอนตั้งแต่สร้างดิสไปยังทำระบบสอนหาของตกแต่ง</p>
+                    <div class="inline-block bg-blue-900/30 text-text-blue font-medium px-4 py-1.5 rounded-lg text-sm border border-blue-900/50">
                         ค่าคอร์สเพียง 599.-
                     </div>
                 </div>
-                <a href="https://discord.gg/Q589MD6d33" target="_blank" class="w-full md:w-auto bg-gray-800 hover:bg-black text-white text-sm font-medium py-3 px-6 rounded-xl transition-colors">
+                <a href="https://discord.gg/Q589MD6d33" target="_blank" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-3 px-6 rounded-xl transition-colors">
                     ดูรายละเอียดคอร์ส <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
             </div>
         </section>
 
-        <!-- App Packages -->
-        <section class="bg-white/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white relative">
+        <section class="bg-gray-900/90 rounded-[2rem] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/5 relative">
             <i class="fa-solid fa-crown sticker-icon absolute -top-4 -left-4 text-3xl text-yellow-500 rotate-12 z-50"></i>
             
             <div class="text-center mb-8">
-                <h3 class="text-xl font-semibold text-gray-800 flex items-center justify-center gap-3 mb-2">
-                    <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500">
+                <h3 class="text-xl font-semibold text-gray-100 flex items-center justify-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400">
                         <i class="fa-solid fa-cubes"></i>
                     </div>
                     เรทราคาทำเซิร์ฟเวอร์
@@ -366,40 +358,38 @@
             </div>
 
             <div class="grid lg:grid-cols-3 gap-6 items-stretch">
-                <!-- Essential -->
-                <div class="border border-gray-100 rounded-2xl p-6 flex flex-col hover:border-purple-200 transition-all bg-white">
-                    <div class="text-[10px] font-semibold text-text-blue bg-purple-50 inline-block px-3 py-1 rounded-full w-max mb-4">สำเร็จ</div>
-                    <h4 class="text-lg font-semibold text-gray-800 mb-1">ถูกกว่าสั่งทำ</h4>
+                <div class="border border-gray-800 rounded-2xl p-6 flex flex-col hover:border-blue-900 transition-all bg-gray-800/20">
+                    <div class="text-[10px] font-semibold text-text-blue bg-blue-900/30 inline-block px-3 py-1 rounded-full w-max mb-4">สำเร็จ</div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-1">ถูกกว่าสั่งทำ</h4>
                     <p class="text-xs text-gray-500 mb-6 line-clamp-2">สอบถามเพิ่มเติมทักมาค่ะ</p>
                     
-                    <ul class="text-sm space-y-3 mb-6 flex-grow text-gray-600">
+                    <ul class="text-sm space-y-3 mb-6 flex-grow text-gray-400">
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสสำเร็จราคาเริ่มต้น 79.-</span></li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ขึ้นอยู่กับจำนวนห้องและระบบในเซิร์ฟเวอร์</span></li>
                     </ul>
                     
-                    <div class="text-[11px] text-orange-600 bg-orange-50 p-2 rounded-lg mb-4 flex items-start gap-2">
+                    <div class="text-[11px] text-orange-400 bg-orange-900/20 p-2 rounded-lg mb-4 flex items-start gap-2">
                         <i class="fa-solid fa-circle-info mt-0.5 shrink-0"></i>
                         <span>ดิสสำเร็จราคาถูกกว่าราคาสั่งทำแน่นอนค่ะ</span>
                     </div>
 
-                    <div class="pt-4 border-t border-gray-100 mt-auto">
-                        <div class="flex justify-between items-center mb-1 text-sm text-gray-600">
-                            <span>หากจะแก้รูปแบบเหมาๆ</span> <span class="font-medium text-gray-800">+20.-</span>
+                    <div class="pt-4 border-t border-gray-800 mt-auto">
+                        <div class="flex justify-between items-center mb-1 text-sm text-gray-400">
+                            <span>หากจะแก้รูปแบบเหมาๆ</span> <span class="font-medium text-gray-200">+20.-</span>
                         </div>
                         <div class="flex justify-between items-center text-sm">
-                            <span class="text-gray-800 font-medium">หากเพิ่มระบบอื่นๆ</span> <span class="font-bold text-text-blue text-lg">ราคาขึ้นอยู่กับระบบ</span>
+                            <span class="text-gray-100 font-medium">หากเพิ่มระบบอื่นๆ</span> <span class="font-bold text-text-blue text-lg">ราคาขึ้นอยู่กับระบบ</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pro -->
-                <div class="border border-text-blue rounded-2xl p-6 flex flex-col shadow-sm relative bg-white">
+                <div class="border border-text-blue rounded-2xl p-6 flex flex-col shadow-sm relative bg-gray-800/20">
                     <div class="absolute -top-3 right-4 bg-text-blue text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</div>
-                    <div class="text-[10px] font-semibold text-text-blue bg-purple-50 inline-block px-3 py-1 rounded-full w-max mb-4">สั่งทำ</div>
-                    <h4 class="text-lg font-semibold text-gray-800 mb-1">ราคาเดียวไม่บวกเพิ่ม</h4>
+                    <div class="text-[10px] font-semibold text-text-blue bg-blue-900/30 inline-block px-3 py-1 rounded-full w-max mb-4">สั่งทำ</div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-1">ราคาเดียวไม่บวกเพิ่ม</h4>
                     <p class="text-xs text-gray-500 mb-6 line-clamp-2">สามารถบรีฟได้ทุกอย่าง</p>
                     
-                    <ul class="text-sm space-y-3 mb-6 flex-grow text-gray-600">
+                    <ul class="text-sm space-y-3 mb-6 flex-grow text-gray-400">
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสส่วนตัว 89.-</span></li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสแก๊ง 109.-</span></li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสแคลน 109.-</span></li>
@@ -410,49 +400,47 @@
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสประเทศ 399.-</span></li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-0.5"></i> <span>ดิสโรลเพลย์ห้องเยอะ 699.-</span></li>
                     </ul>
-                    <div class="text-[11px] text-orange-600 bg-orange-50 p-2 rounded-lg mb-4 flex items-start gap-2">
+                    <div class="text-[11px] text-orange-400 bg-orange-900/20 p-2 rounded-lg mb-4 flex items-start gap-2">
                         <i class="fa-solid fa-circle-info mt-0.5 shrink-0"></i>
                         <span>หากอยากได้ระบบเพิ่มเติมจากที่ทางร้านทำบวกตามราคาระบบ</span>
                     </div>
                     
-                    <div class="pt-4 border-t border-gray-100 mt-auto">
-                        <div class="flex justify-between items-center mb-1 text-sm text-gray-600">
-                            <span>แก้ดิสจากความผิดลูกค้า</span> <span class="font-medium text-gray-800">+20.-</span>
+                    <div class="pt-4 border-t border-gray-800 mt-auto">
+                        <div class="flex justify-between items-center mb-1 text-sm text-gray-400">
+                            <span>แก้ดิสจากความผิดลูกค้า</span> <span class="font-medium text-gray-200">+20.-</span>
                         </div>
                         <div class="flex justify-between items-center text-sm">
-                            <span class="text-gray-800 font-medium">หากเป็นความผิดทางร้าน</span> <span class="font-bold text-text-blue text-lg">แก้ให้ฟรี</span>
+                            <span class="text-gray-100 font-medium">หากเป็นความผิดทางร้าน</span> <span class="font-bold text-text-blue text-lg">แก้ให้ฟรี</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="text-center pt-4 relative">
             <i class="fa-solid fa-paper-plane sticker-icon absolute -top-4 -left-2 text-2xl text-blue-400 rotate-12 z-50"></i>
             
-            <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center justify-center gap-2">
+            <h3 class="text-lg font-semibold text-gray-100 mb-4 flex items-center justify-center gap-2">
                 <i class="fa-regular fa-address-card text-text-blue"></i> ช่องทางการติดต่อ
             </h3>
             <div class="flex flex-wrap justify-center gap-3">
-                <a href="https://www.facebook.com/kaizen.shop.cheer?" target="_blank" class="flex items-center gap-2 bg-white border border-gray-200 hover:border-[#1877F2] hover:text-[#1877F2] text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
+                <a href="https://www.facebook.com/kaizen.shop.cheer?" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-700 hover:border-[#1877F2] hover:text-[#1877F2] text-gray-300 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
                     <i class="fa-brands fa-facebook text-lg"></i> Facebook
                 </a>
-                <a href="https://lin.ee/7ta37LG" target="_blank" class="flex items-center gap-2 bg-white border border-gray-200 hover:border-[#00B900] hover:text-[#00B900] text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
+                <a href="https://lin.ee/7ta37LG" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-700 hover:border-[#00B900] hover:text-[#00B900] text-gray-300 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
                     <i class="fa-brands fa-line text-lg"></i> Line
                 </a>
-                <a href="https://discord.gg/Q589MD6d33" target="_blank" class="flex items-center gap-2 bg-white border border-gray-200 hover:border-[#00B900] hover:text-[#00B900] text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
-                    <i class="fa-brands fa-line text-lg"></i> Discord
+                <a href="https://discord.gg/Q589MD6d33" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-700 hover:border-[#5865F2] hover:text-[#5865F2] text-gray-300 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
+                    <i class="fa-brands fa-discord text-lg"></i> Discord
                 </a>
-                <a href="https://www.instagram.com/kz_.kaizen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center gap-2 bg-white border border-gray-200 hover:border-[#E4405F] hover:text-[#E4405F] text-gray-600 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
+                <a href="https://www.instagram.com/kz_.kaizen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-700 hover:border-[#E4405F] hover:text-[#E4405F] text-gray-300 px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
                     <i class="fa-brands fa-instagram text-lg"></i> Instagram
                 </a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="text-center pt-8 pb-4">
-            <p class="text-xs text-gray-400 font-sans tracking-wide uppercase">© 2026 KAIZEN SHOP. CHEER</p>
+            <p class="text-xs text-gray-500 font-sans tracking-wide uppercase">© 2026 KAIZEN SHOP. CHEER</p>
         </footer>
 
     </main>
